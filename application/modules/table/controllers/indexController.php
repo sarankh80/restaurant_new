@@ -7,9 +7,8 @@ class Table_indexController extends Zend_Controller_Action {
 		defined('BASE_URL')	|| define('BASE_URL', Zend_Controller_Front::getInstance()->getBaseUrl());
 	}
 	public function indexAction(){
-		//$this->_helper->layout()->disableLayout();
-		$frm = new menu_Form_FrmMenuGroup();
-		$this->view->form = $frm->FrmMenu();
+		$frm = new table_Form_FrmTable();
+		$this->view->form = $frm->FrmTable();
 	}
 	
 	
