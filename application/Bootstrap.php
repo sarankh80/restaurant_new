@@ -31,7 +31,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	}	
 	protected function _initNavigationXml()
 	{
-// 		$this->bootstrap('layout');
+// 		$this->bootstrap('layout'); ///
 // 		$layout = $this->getResource('layout');
 // 		$view = $layout->getView();
 // 		$config = new Zend_Config_Xml(APPLICATION_PATH.'/configs/navigation.xml');
