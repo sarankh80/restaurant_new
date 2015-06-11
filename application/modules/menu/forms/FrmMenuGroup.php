@@ -6,20 +6,17 @@ Class menu_Form_FrmMenuGroup extends Zend_Dojo_Form {
 		$this->tr = Application_Form_FrmLanguages::getCurrentlanguage();
 	}
 	public function FrmMenu($data=null){
-		$menu_code = new Zend_Dojo_Form_Element_TextBox('menu_code');
+		$menu_code = new Zend_Form_Element_Text('menu_code');
 		$menu_code->setAttribs(array(
-				'dojoType'=>'dijit.form.CheckBox',
-				'checked'=>'checked','class'=>'form-control'
+				'class'=>'form-control',
 		));
-		$description = new Zend_Dojo_Form_Element_TextBox('description');
+		$description = new Zend_Form_Element_Text('description');
 		$description->setAttribs(array(
-				'dojoType'=>'dijit.form.CheckBox',
-				'checked'=>'checked','class'=>'form-control'
+				'class'=>'form-control',
 		));
-		$lang_1 = new Zend_Dojo_Form_Element_TextBox('lang_1');
+		$lang_1 = new Zend_Form_Element_Text('lang_1');
 		$lang_1->setAttribs(array(
-				'dojoType'=>'dijit.form.CheckBox',
-				'checked'=>'checked','class'=>'form-control'
+				'class'=>'form-control',
 		));
 		$lang_2 = new Zend_Dojo_Form_Element_TextBox('lang_2');
 		$lang_2->setAttribs(array(
@@ -37,13 +34,25 @@ Class menu_Form_FrmMenuGroup extends Zend_Dojo_Form {
 		$show_description = new Zend_Dojo_Form_Element_FilteringSelect('show_description');
 		$show_description->setAttribs(array(
 				'dojoType'=>'dijit.form.CheckBox',
-				'checked'=>'checked','class'=>'form-control'
+				'class'=>'form-control'
 		));
-		$description_opt = array(
-				1=>$this->tr->translate("ACTIVE"),
-				0=>$this->tr->translate("DACTIVE"));
+		$description_opt = array( ""=>$this->tr->translate("SELECT_DESCRIPTION"));
 		$show_description->setMultiOptions($description_opt);
-		$this->addElements(array($menu_code,$description,$lang_1,$lang_2,$lang_3,$show_description));
+		$photo = new Zend_Form_Element_File('photo');
+		$background = new Zend_Form_Element_Text('background');
+		$background->setAttribs(array(
+				'class'=>'form-control color-picker-rgba'
+		));
+		$font_color = new Zend_Form_Element_Text('font_color');
+		$font_color->setAttribs(array(
+				'class'=>'form-control','id'=>"selected-color1"
+		));
+		$font_size = new Zend_Form_Element_Text('demo4');
+		$font_size->setAttribs(array(
+				'class'=>'form-control','id'=>"demo4",'value'=>12
+		));
+		
+		$this->addElements(array($menu_code,$description,$lang_1,$lang_2,$lang_3,$show_description,$background,$font_color,$font_size));
 		return $this;
 		
 	}	

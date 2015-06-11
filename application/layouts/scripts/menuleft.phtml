@@ -1,5 +1,13 @@
-
-			<nav id="pageslide-left" class="pageslide inner">
+<?php 	$tr=Application_Form_FrmLanguages::getCurrentlanguage();?> 
+<?php $request=Zend_Controller_Front::getInstance()->getRequest(); $module=$request->getModuleName();?>
+<script type="text/javascript">
+<!--
+	function OpenClass(){
+		window.location = "<?php echo $this->baseUrl();?>/menu";
+	}
+//-->
+</script>
+		<nav id="pageslide-left" class="pageslide inner">
 				<div class="navbar-content">
 					<!-- start: SIDEBAR -->
 					<div class="main-navigation left-wrapper transition-left">
@@ -22,38 +30,43 @@
 							<li>
 								
 							</li>
-							<li>
-								<a><i class="fa fa-desktop"></i> <span class="title"> Menu Management </span><i class="icon-arrow"></i> </a>
+							<li id="menu">
+								<a onclick="OpenClass()"><i class="fa fa-desktop"></i> <span class="title"> Menu Management </span><i class="icon-arrow"></i> </a>
 								<ul class="sub-menu">
-									<li>
-										<a href="javascript:;">
-											Horizontal Menu 
+									<li id="menu_group">
+										<a href="<?php echo $this->baseUrl()?>/menu/group">
+											<?php echo $tr->translate("MENU_GROUP")?>
 										</a>
 									
 									</li>
 									<li>
 										<a href="layouts_sidebar_closed.html">
-											<span class="title"> Sidebar Closed </span>
+											<?php echo $tr->translate("MENU_ITEM")?>
 										</a>
 									</li>
 									<li>
 										<a href="layouts_sidebar_not_fixed.html">
-											<span class="title"> Sidebar Not Fixed </span>
+											<?php echo $tr->translate("MENU_ARRANGEMENT")?>
 										</a>
 									</li>
 									<li>
 										<a href="layouts_boxed_layout.html">
-											<span class="title"> Boxed Layout </span>
+											<?php echo $tr->translate("COMBO_MASTER")?>
 										</a>
 									</li>
 									<li>
 										<a href="layouts_footer_fixed.html">
-											<span class="title"> Footer Fixed </span>
+											<?php echo $tr->translate("RECIPE")?>
 										</a>
 									</li>
 									<li>
 										<a href="layouts_single_page.html">
-											<span class="title"> Single-Page Interface </span>
+											<?php echo $tr->translate("DISCOUNT")?>
+										</a>
+									</li>
+									<li>
+										<a href="layouts_single_page.html">
+											<?php echo $tr->translate("HAPPY_HOUR")?>
 										</a>
 									</li>
 								</ul>

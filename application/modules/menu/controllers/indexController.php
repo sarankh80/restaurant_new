@@ -8,8 +8,6 @@ class Menu_indexController extends Zend_Controller_Action {
 	}
 	public function indexAction(){
 		//$this->_helper->layout()->disableLayout();
-		$frm = new menu_Form_FrmMenuGroup();
-		$this->view->form = $frm->FrmMenu();
 	}
 	
 	
