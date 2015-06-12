@@ -60,7 +60,7 @@ Class menu_Form_FrmMenuGroup extends Zend_Form {
 		));
 		$active = new Zend_Form_Element_Checkbox('active');
 		$active->setAttribs(array(
-				'class'=>'red',
+				'class'=>'yellow',
 		));
 		$format = new Zend_Form_Element_Text('demo4');
 		$format->setAttribs(array(

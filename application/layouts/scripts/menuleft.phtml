@@ -5,6 +5,7 @@
 	function OpenClass(){
 		window.location = "<?php echo $this->baseUrl();?>/menu";
 	}
+	
 //-->
 </script>
 		<nav id="pageslide-left" class="pageslide inner">
@@ -71,17 +72,22 @@
 									</li>
 								</ul>
 							</li>
-							<li>
-								<a href="javascript:void(0)"><i class="fa fa-th-large"></i> <span class="title"> Tables Management</span><i class="icon-arrow"></i> </a>
+							<li id="menu_table">
+								<a onclick="OpenClassTable()" href="javascript:void(0)"><i class="fa fa-th-large"></i> <span class="title"> Tables Management</span><i class="icon-arrow"></i> </a>
 								<ul class="sub-menu">
-									<li>
-										<a href="table_basic.html">
-											<span class="title">Basic Tables</span>
+									<li id="menu_service">
+										<a href="<?php echo $this->baseUrl()?>/table/service">
+											<?php echo $tr->translate("APPLY_SERVICE")?>
 										</a>
 									</li>
-									<li>
-										<a href="table_responsive.html">
-											<span class="title">Responsive Tables</span>
+									<li id="menu_tables">
+										<a href="<?php echo $this->baseUrl()?>/table/tables">
+											<?php echo $tr->translate("TABLES")?>
+										</a>
+									</li>
+									<li id="menu_arrangement">
+										<a href="<?php echo $this->baseUrl()?>/table/arrangement">
+											<?php echo $tr->translate("TABLE_ARRANGEMENT")?>
 										</a>
 									</li>
 									<li>

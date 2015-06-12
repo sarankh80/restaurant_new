@@ -89,7 +89,7 @@ var FormValidator = function () {
             messages: {
                 firstname: "Please specify your first name",
                 lastname: "Please specify your last name",
-                menu_code: "សូមបញ្ជក់លេខកូដមឺុនុយ",
+                menu_code: "Please specify Menu Code",
 				description:"Please specify Description",
 				lang_1:"Please specify Language One",
 				lang_2:"Please specify Language Two",
