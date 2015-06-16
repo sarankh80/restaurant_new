@@ -123,8 +123,11 @@ input[type=checkbox]{*opacity: 1!important;}
 										</div>
 										<div class="col-sm-12" style="padding: 0;">
 											<div class="form-group col-sm-6">
-												<div class="col-sm-12">
-													<div class="tabbable" style="margin-top: -100px;" id="tabShwo">
+												
+										</div>
+										<div class="col-sm-12" style="padding: 0;">
+											<div class="form-group col-sm-12">
+													<div class="tabbable" id="tabShwo" style="margin-top: -45px;">
 														<ul id="myTab" class="nav nav-tabs">
 															<li class="active">
 																<a href="#myTab_example1" data-toggle="tab">
@@ -144,38 +147,70 @@ input[type=checkbox]{*opacity: 1!important;}
 														</ul>
 														<div class="tab-content">
 															<div class="tab-pane fade in active" id="myTab_example1">
-																<div class="form-group">
-																	<label class="col-sm-4 control-label" for="form-field-1">
-																		<?php echo $tr->translate("BACKGROUP_COLOR")?>
-																	</label>
-																	<div class="col-sm-8">
-																		<?php echo $form->getElement('background');?>
+															<div class="form-group">
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label" for="form-field-1">
+																			<?php echo $tr->translate("BACKGROUP_COLOR")?>
+																		</label>
+																		<div class="col-sm-8">
+																			<?php echo $form->getElement('background');?>
+																		</div>
 																	</div>
-																</div>
-																<div class="form-group">
-																	<label class="col-sm-4 control-label" for="form-field-1">
-																		<?php echo $tr->translate("FONT_COLOR")?>
-																	</label>
-																	<div class="col-sm-8">
-																		<div class="input-group">
-																			<?php echo $form->getElement('font_color');?>
-																			<span class="btn input-group-addon btn-azure" data-toggle="dropdown">color</span>
-																			<ul class="dropdown-menu pull-right center">
-																				<li>
-																					<div class="color-palette"></div>
-																				</li>
-																			</ul>
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label" for="form-field-1">
+																			<?php echo $tr->translate("FONT_COLOR")?>
+																		</label>
+																		<div class="col-sm-8">
+																			<div class="input-group">
+																				<?php echo $form->getElement('font_color');?>
+																				<span class="btn input-group-addon btn-azure" data-toggle="dropdown">color</span>
+																				<ul class="dropdown-menu pull-right center">
+																					<li>
+																						<div class="color-palette"></div>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label" for="form-field-1">
+																			<?php echo $tr->translate("FONT_SIZE")?>
+																		</label>
+																		<div class="col-sm-8">
+																			<?php echo $form->getElement('demo3');?>
 																		</div>
 																	</div>
 																</div>
-																<div class="form-group">
-																	<label class="col-sm-4 control-label" for="form-field-1">
-																		<?php echo $tr->translate("FONT_SIZE")?>
-																	</label>
-																	<div class="col-sm-8">
-																		<?php echo $form->getElement('demo3');?>
+																<div class="form-group col-sm-6">
+																	<div class="col-sm-12">
+																		<label class="col-sm-4 control-label" for="form-field-1">
+																			<?php echo $tr->translate("COMBO_ITEM")?>
+																		</label>
+																		<div class="col-sm-2">
+																			<label class="checkbox-inline">
+																				<?php echo $form->getElement('combo');?>
+																			</label>													
+																		</div>
+																		<label class="col-sm-4 control-label" for="form-field-1">
+																			<?php echo $tr->translate("ACTIVE")?>
+																		</label>
+																		<div class="col-sm-2">
+																			<label class="checkbox-inline">
+																				<?php echo $form->getElement('active');?>
+																			</label>													
+																		</div>
+																		<div  class="col-sm-12">
+																			<label class="col-sm-4 control-label" for="form-field-2">
+																				<?php echo $tr->translate("APPLY_TO_COMPANY")?>
+																			</label>
+																			<div class="col-sm-8">
+																				<?php echo $form->getElement('apply')?>
+																			</div>
+																		</div>
 																	</div>
 																</div>
+															</div>
 															</div>
 															<div class="tab-pane fade" id="myTab_example2">
 																<div class="form-group">
@@ -200,6 +235,7 @@ input[type=checkbox]{*opacity: 1!important;}
 																	</label>
 																	<div class="col-sm-8">
 																		<?php echo $form->getElement('arrange');?>                                                
+																		<?php echo $form->getElement('demo3');?>
 																	</div>
 																</div>
 																<div class="form-group">
@@ -222,34 +258,6 @@ input[type=checkbox]{*opacity: 1!important;}
 													</div>
 												</div>
 											</div>
-											<div class="form-group col-sm-6">
-												<div class="col-sm-12">
-													<label class="col-sm-4 control-label" for="form-field-1">
-														<?php echo $tr->translate("COMBO")?>
-													</label>
-													<div class="col-sm-2">
-														<label class="checkbox-inline">
-															<?php echo $form->getElement('combo');?>
-														</label>													
-													</div>
-													<label class="col-sm-4 control-label" for="form-field-1">
-														<?php echo $tr->translate("ACTIVE")?>
-													</label>
-													<div class="col-sm-2">
-														<label class="checkbox-inline">
-															<?php echo $form->getElement('active');?>
-														</label>													
-													</div>
-													<div  class="col-sm-12">
-														<label class="col-sm-4 control-label" for="form-field-2">
-															<?php echo $tr->translate("APPLY_TO_COMPANY")?>
-														</label>
-														<div class="col-sm-8">
-															<?php echo $form->getElement('apply')?>
-														</div>
-													</div>
-												</div>
-											</div>
 										</div>
 										<div class="col-md-12">
 												<div class="panel-body table-responsive" id="panel-body">
@@ -257,6 +265,7 @@ input[type=checkbox]{*opacity: 1!important;}
 														<thead>
 															<tr style="text-align: center;">
 																<th style="text-align: center;"><?php echo $tr->translate("NUM")?></th>
+																<th style="text-align: center;"><?php echo $tr->translate("MENU_ITEM_CODE")?></th>
 																<th style="text-align: center;"><?php echo $tr->translate("MENU_GROUP_CODE")?></th>
 																<th style="text-align: center;"><?php echo $tr->translate("DESCRIPTION")?></th>
 																<th style="text-align: center;"><?php echo $tr->translate("LANG_ONE")?></th>
@@ -267,6 +276,7 @@ input[type=checkbox]{*opacity: 1!important;}
 															<tr>
 																<td style="text-align: center;">1</td>
 																<td>Amaya</td>
+																<td>Amaya</td>
 																<td class="hidden-xs">W3C,
 																INRIA</td>
 																<td>Free</td>
@@ -274,6 +284,7 @@ input[type=checkbox]{*opacity: 1!important;}
 															</tr>
 															<tr>
 																<td style="text-align: center;">2</td>
+																<td>Amaya</td>
 																<td>AOL Explorer</td>
 																<td class="hidden-xs">America Online, Inc</td>
 																<td>Free</td>
