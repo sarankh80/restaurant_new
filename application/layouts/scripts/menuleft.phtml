@@ -75,9 +75,9 @@
 							<li id="menu_table">
 								<a onclick="OpenClassTable()" href="javascript:void(0)"><i class="fa fa-th-large"></i> <span class="title"> Tables Management</span><i class="icon-arrow"></i> </a>
 								<ul class="sub-menu">
-									<li id="menu_service">
-										<a href="<?php echo $this->baseUrl()?>/table/service">
-											<?php echo $tr->translate("APPLY_SERVICE")?>
+									<li id="menu_customer">
+										<a href="<?php echo $this->baseUrl()?>/table/customer">
+											<?php echo $tr->translate("APPLY_customer")?>
 										</a>
 									</li>
 									<li id="menu_tables">
@@ -110,19 +110,19 @@
 											<?php echo $tr->translate("WHERE_HOUSE")?>
 										</a>
 									</li>
-									<li>
-										<a href="form_wizard.html">
-											<span class="title">Form Wizard</span>
+									<li id="menu_measure">
+										<a href="<?php echo $this->baseUrl()?>/inventory/measure">
+											<?php echo $tr->translate("MEASURE")?>
 										</a>
 									</li>
-									<li>
-										<a href="form_validation.html">
-											<span class="title">Form Validation</span>
+									<li id="menu_productlind">
+										<a href="<?php echo $this->baseUrl()?>/inventory/productlind">
+											<?php echo $tr->translate("PRODUCTLIND")?>
 										</a>
 									</li>
-									<li>
-										<a href="form_inline.html">
-											<span class="title">Inline Editor</span>
+									<li id="menu_supplier">
+										<a href="<?php echo $this->baseUrl()?>/inventory/supplier">
+											<?php echo $tr->translate("SUPPLIER")?>
 										</a>
 									</li>
 									<li>
@@ -155,19 +155,44 @@
 											<?php echo $tr->translate("APPLY_CREDIT_DEPOSIT")?>
 										</a>
 									</li>
-									<li>
-										<a href="login_login.html?box=register">
-											<span class="title"> Registration Form </span>
+									<li id="menu_credit">
+										<a href="<?php echo $this->baseUrl()?>/customer/credit">
+											<?php echo $tr->translate("CREDIT CARD")?>
 										</a>
 									</li>
-									<li>
-										<a href="login_login.html?box=forgot">
-											<span class="title"> Forgot Password Form </span>
+									<li id="menu_customer">
+										<a href="<?php echo $this->baseUrl()?>/customer/customer">
+											<?php echo $tr->translate("CUSTOMER")?>
 										</a>
 									</li>
+									<li id="menu_currency">
+										<a href="<?php echo $this->baseUrl()?>/customer/currency">
+											<?php echo $tr->translate("CURRENCY")?>
+										</a>
+									</li>
+									<li id="menu_curtype">
+										<a href="<?php echo $this->baseUrl()?>/customer/curtype">
+											<?php echo $tr->translate("CURRENCY TYPE")?>
+										</a>
+									</li>
+									<li id="menu_cash">
+										<a href="<?php echo $this->baseUrl()?>/customer/cash">
+											<?php echo $tr->translate("ENTER CASH DEPOSIT")?>
+										</a>
+									</li>
+									<li id="menu_invoice">
+										<a href="<?php echo $this->baseUrl()?>/customer/invoice">
+											<?php echo $tr->translate("ENTER INVOICE PAYMENT")?>
+										</a>
 									<li>
-										<a href="login_lock_screen.html">
-											<span class="title">Lock Screen</span>
+									<li id="menu_rate">
+										<a href="<?php echo $this->baseUrl()?>/customer/rate">
+											<?php echo $tr->translate("EXCHANGE RATE")?>
+										</a>
+									</li>
+									<li id="menu_sale">
+										<a href="<?php echo $this->baseUrl()?>/customer/sale">
+											<?php echo $tr->translate("SALE REPRESENTATIVE")?>
 										</a>
 									</li>
 								</ul>
