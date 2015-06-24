@@ -6,7 +6,7 @@
 <!--
 $(document).ready(function(){
 	var d = document.getElementById("menu_table");
-	var g = document.getElementById("menu_tables");
+	var g = document.getElementById("menu_table_unlock");
 	d.className = d.className + " active open";
 	g.className = g.className + " active open";
 });
@@ -120,82 +120,61 @@ input[type=checkbox]{*opacity: 1!important;}
 													</div>
 												</div>
 											</div>
-											
 										</div>
-										
-											
-										<div class="col-sm-12" style="padding: 0;margin-top: 75px;">
-											<div class="form-group col-sm-12">
+										<div class="col-sm-12" style="padding: 0;">
+											<div class="form-group col-sm-6">
 												<div class="col-sm-12">
 													<div class="tabbable" style="margin-top: -100px;" id="tabShwo">
 														<ul id="myTab" class="nav nav-tabs">
 															<li class="active">
 																<a href="#myTab_example1" data-toggle="tab">
 																	<i class="green fa fa-gear"></i> <?php echo $tr->translate("GENERAL_INFORMATION")?>
-																	
 																</a>
 															</li>
 															<li>
 																<a href="#myTab_example2" data-toggle="tab">
-																	<i class="green fa fa-gear"></i> <?php echo $tr->translate("LOCATION_OF_TABLE")?>
+																	<i class="green fa fa-gear"></i> <?php echo $tr->translate("LOCATION_OF_MENU_GROUP")?>
 																</a>
 															</li>
 															<li>
 																<a href="#myTab_example3" data-toggle="tab">
-																	<i class="green fa fa-gear"></i> <?php echo $tr->translate("FORMAT")?>
-																</a>
-															</li>
-															<li>
-																<a href="#myTab_example4" data-toggle="tab">
 																	<i class="green fa fa-gear"></i> <?php echo $tr->translate("NOTE")?>
 																</a>
 															</li>
 														</ul>
 														<div class="tab-content">
-															<div class="tab-pane fade in active" id="myTab_example1" class="col-sm-12">
+															<div class="tab-pane fade in active" id="myTab_example1">
 																<div class="form-group">
-																<table class="table table-hover">
-																      <tr>
-																         <td class="col-sm-1 control-label" for="form-field-1"><?php echo $tr->translate("GROUP_CODE")?> </td>
-																	     <td > <?php echo $form->getElement('g_code');?> </td>
-																	     <td ><?php echo $form->getElement('g_code1');?></td>
-																      </tr>
-																      <tr>
-																         <td><?php echo $tr->translate("SHOW_DESCRIPTION")?> </td>
-																	     <td > <?php echo $form->getElement('show_description1');?> </td>
-																	     <td ><?php echo $tr->translate("TYPE_Of_TABLE")?> </td>
-																      </tr>
-																       <tr>
-																         <td class="col-sm-1 control-label" for="form-field-1"><?php echo $tr->translate("MAX_SEAT")?> </td>
-																	     <td > <?php echo $form->getElement('demo3');?> </td>
-																	     <td rowspan="4" class="col-sm-5" class="autosize form-control"> <?php echo $form->getElement('note1');?> </td>
-																      </tr>
-																       <tr>
-																         <td class="col-sm-1 control-label" for="form-field-1"><?php echo $tr->translate("PRICE")?> </td>
-																	     <td > <?php echo $form->getElement('demo3');?></td>
-																      </tr>
-																      <tr>
-																         <td><?php echo $tr->translate("EST_TIME")?> </td>
-																         <td><?php echo $form->getElement('time');?> </td>
-																      </tr>
-																      <tr>
-																         <td><?php echo $tr->translate("APPLY_TO_COMPANY")?> </td>
-																         <td><?php echo $form->getElement('show_description2');?> </td>
-																      </tr>
-																</table>
-																     <div class="col-sm-12" style="padding: 0;">
-																         <table  class="table table-hover" >
-																                <tr class="col-sm-12">
-																                  <td style="padding-left: 10px;"> <?php echo $form->getElement('active');?></td>
-																                  <td ><?php echo $tr->translate("ACTIVE")?></td>
-																                   <td style="padding-left: 50px;"> <?php echo $form->getElement('active');?></td>
-																                  <td ><?php echo $tr->translate("TIME")?></td>
-																                  <td  style="padding-left: 50px;"> <?php echo $form->getElement('active');?></td>
-																                  <td ><?php echo $tr->translate("DESCOUNT")?></td>
-																                  <td style="padding-left: 80px;"><input class="btn btn-light-green" type="button" value="Assign Table Type"></td>
-																                </tr>
-																         </table>
-																     </div>
+																	<label class="col-sm-4 control-label" for="form-field-1">
+																		<?php echo $tr->translate("BACKGROUP_COLOR")?>
+																	</label>
+																	<div class="col-sm-8">
+																		<?php echo $form->getElement('background');?>
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-4 control-label" for="form-field-1">
+																		<?php echo $tr->translate("FONT_COLOR")?>
+																	</label>
+																	<div class="col-sm-8">
+																		<div class="input-group">
+																			<?php echo $form->getElement('font_color');?>
+																			<span class="btn input-group-addon btn-azure" data-toggle="dropdown">color</span>
+																			<ul class="dropdown-menu pull-right center">
+																				<li>
+																					<div class="color-palette"></div>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-4 control-label" for="form-field-1">
+																		<?php echo $tr->translate("FONT_SIZE")?>
+																	</label>
+																	<div class="col-sm-8">
+																		<?php echo $form->getElement('demo3');?>
+																	</div>
 																</div>
 															</div>
 															<div class="tab-pane fade" id="myTab_example2">
@@ -243,7 +222,34 @@ input[type=checkbox]{*opacity: 1!important;}
 													</div>
 												</div>
 											</div>
-										
+											<div class="form-group col-sm-6">
+												<div class="col-sm-12">
+													<label class="col-sm-4 control-label" for="form-field-1">
+														<?php echo $tr->translate("COMBO")?>
+													</label>
+													<div class="col-sm-2">
+														<label class="checkbox-inline">
+															<?php echo $form->getElement('combo');?>
+														</label>													
+													</div>
+													<label class="col-sm-4 control-label" for="form-field-1">
+														<?php echo $tr->translate("ACTIVE")?>
+													</label>
+													<div class="col-sm-2">
+														<label class="checkbox-inline">
+															<?php echo $form->getElement('active');?>
+														</label>													
+													</div>
+													<div  class="col-sm-12">
+														<label class="col-sm-4 control-label" for="form-field-2">
+															<?php echo $tr->translate("APPLY_TO_COMPANY")?>
+														</label>
+														<div class="col-sm-8">
+															<?php echo $form->getElement('apply')?>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 										<div class="col-md-12">
 												<div class="panel-body table-responsive" id="panel-body">

@@ -1,5 +1,5 @@
 <?php
-class Table_tablesController extends Zend_Controller_Action {
+class Table_unlockserviceController extends Zend_Controller_Action {
 	const REDIRECT_URL = '/group/index';
 	public function init()
 	{
@@ -7,8 +7,8 @@ class Table_tablesController extends Zend_Controller_Action {
 		defined('BASE_URL')	|| define('BASE_URL', Zend_Controller_Front::getInstance()->getBaseUrl());
 	}
 	public function indexAction(){
-		$frm = new table_Form_FrmTables();
-		$this->view->form = $frm->FrmTables();
+		$frm = new table_Form_FrmUnlockService();
+		$this->view->form = $frm->Frm_unlock_service();
 	}
 	
 	
