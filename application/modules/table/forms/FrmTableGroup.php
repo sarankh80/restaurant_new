@@ -85,7 +85,11 @@ Class table_Form_FrmTableGroup extends Zend_Dojo_Form {
 		$note->setAttribs(array(
 				'class'=>'form-control','style'=>"margin-top: 0px; margin-bottom: 0px; height: 100px;"
 		));
-		$this->addElements(array($apply,$active,$combo,$menu_code,$description,$lang_1,$lang_2,$lang_3,
+		$note1 = new Zend_Form_Element_Textarea('note1');
+		$note1->setAttribs(array(
+				'class'=>'form-control','style'=>"margin-top: 0px; margin-bottom: 0px; height: 100px;"
+		));
+		$this->addElements(array($note1,$apply,$active,$combo,$menu_code,$description,$lang_1,$lang_2,$lang_3,
 				$show_description,$background,$font_color,$font_size,$format,$setting,$arrange,$resize,$note));
 		return $this;
 		
