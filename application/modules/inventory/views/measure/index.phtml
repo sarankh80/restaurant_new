@@ -5,8 +5,8 @@
 <script type="text/javascript">
 <!--
 $(document).ready(function(){
-	var d = document.getElementById("menu_inventory");
-	var g = document.getElementById("menu_wherehouse");
+	var d = document.getElementById("menu");
+	var g = document.getElementById("menu_group");
 	d.className = d.className + " active open";
 	g.className = g.className + " active open";
 });
@@ -58,10 +58,10 @@ input[type=checkbox]{opacity: 1!important;}
 										<div class="col-sm-12" style="padding: 0;">
 											<div class="form-group col-sm-6">
 												<label class="col-sm-4 control-label">
-													<?php echo $tr->translate("WHERE_HOUSE_ID")?> <span class="symbol required"></span>
+													<?php echo $tr->translate("UNIT_ID")?> <span class="symbol required"></span>
 												</label>
 												<div class="col-sm-8">
-													<?php echo $form->getElement('where_house_id');?>
+													<?php echo $form->getElement('unit_ID');?>
 												</div>
 											</div>
 											<div class="form-group col-sm-6">
@@ -84,48 +84,22 @@ input[type=checkbox]{opacity: 1!important;}
 											</div>
 											<div class="form-group col-sm-6">
 												<label class="col-sm-4 control-label">
-													<?php echo $tr->translate("ADDRESS1")?>
+													<?php echo $tr->translate("COLOR")?>
 												</label>
 												<div class="col-sm-8">
-													<?php echo $form->getElement('address1');?>
+													<?php echo $form->getElement('color');?>
 												</div>
 											</div>
 										</div>
 										<div class="col-sm-12" style="padding: 0;">
 											<div class="form-group col-sm-6">
 												<label class="col-sm-4 control-label" for="form-field-1">
-													<?php echo $tr->translate("LOCATION_TYPE")?> 
+													<?php echo $tr->translate("APPLY_TO_COMPANY")?> 
 												</label>
 												<div class="col-sm-8">
-													<?php echo $form->getElement('location_type');?>
+													<?php echo $form->getElement('apply_company');?>
 												</div>
 											</div>
-											<div class="form-group col-sm-6">
-												<label class="col-sm-4 control-label" for="form-field-1">
-													<?php echo $tr->translate("ADDRESS2")?> 
-												</label>
-												<div class="col-sm-8">
-													<?php echo $form->getElement('address2');?>
-												</div>
-											</div>
-										<div class="col-sm-12" style="padding: 0;">
-											<div class="form-group col-sm-6">
-												<label class="col-sm-4 control-label">
-													<?php echo $tr->translate("PHONE")?> <span class="symbol required"></span>
-												</label>
-												<div class="col-sm-8">
-													<?php echo $form->getElement('phone');?>
-												</div>
-											</div>
-											<div class="form-group col-sm-6">
-												<label class="col-sm-4 control-label">
-													<?php echo $tr->translate("FAX")?>
-												</label>
-												<div class="col-sm-8">
-													<?php echo $form->getElement('fax');?>
-												</div>
-											</div>
-										</div>
 										<div class="col-sm-12" style="padding: 0;">
 											<div class="form-group col-sm-12">
 												<label class="col-sm-2 control-label">
@@ -145,13 +119,27 @@ input[type=checkbox]{opacity: 1!important;}
 																<th>WHREE_HOUSE_ID</th>
 																<th class="hidden-xs">DISCRIPTION</th>
 																<th>SECOND_LANGAUGE</th>
+																<th>FOCOLOR</th>
 															</tr>
 														</thead>
 														<tbody>
 															<tr>
-																<td>1</td>
-																<td> ឃ្លាំងស្តុក</td>
+																<td>CASE12</td>
+																<td> CASE12</td>
 																<td></td>
+																<td>1200</td>
+															</tr>
+															<tr>
+																<td>CASE6</td>
+																<td> CASE6</td>
+																<td></td>
+																<td>100</td>
+															</tr>
+															<tr>
+																<td>UNIT</td>
+																<td> UNIT</td>
+																<td></td>
+																<td>600</td>
 															</tr>
 														</tbody>
 													</table>

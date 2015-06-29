@@ -93,12 +93,51 @@ Class inventory_Form_FrmSupplier extends Zend_Form {
 		$resize->setAttribs(array(
 				'class'=>'form-control','id'=>"resize",'value'=>12,'placeholder'=>'12'
 		));
-		$note = new Zend_Form_Element_Textarea('note');
-		$note->setAttribs(array(
-				'class'=>'form-control','style'=>"margin-top: 0px; margin-bottom: 0px; height: 100px;"
+		$phone2 = new Zend_Form_Element_Text('phone2');
+		$phone2->setAttribs(array(
+				'checked'=>'checked','class'=>'form-control'
+		));
+		$title = new Zend_Form_Element_Text('title');
+		$title->setAttribs(array(
+				'checked'=>'checked','class'=>'form-control'
+		));
+		$address = new Zend_Form_Element_Text('address');
+		$address->setAttribs(array(
+				'checked'=>'checked','class'=>'form-control'
+		));
+		$address2 = new Zend_Form_Element_Text('address2');
+		$address2->setAttribs(array(
+				'checked'=>'checked','class'=>'form-control'
+		));
+		$city = new Zend_Form_Element_Text('city');
+		$city->setAttribs(array(
+				'checked'=>'checked','class'=>'form-control'
+		));
+		$country = new Zend_Form_Element_Text('country');
+		$country->setAttribs(array(
+				'checked'=>'checked','class'=>'form-control'
+		));
+		$fax = new Zend_Form_Element_Text('fax');
+		$fax->setAttribs(array(
+				'checked'=>'checked','class'=>'form-control'
+		));
+		$fax2 = new Zend_Form_Element_Text('fax2');
+		$fax2->setAttribs(array(
+				'checked'=>'checked','class'=>'form-control'
+		));
+		$email = new Zend_Form_Element_Text('email');
+		$email->setAttribs(array(
+				'checked'=>'checked','class'=>'form-control'
+		));
+		$webpage = new Zend_Form_Element_Text('webpage');
+		$webpage->setAttribs(array(
+				'checked'=>'checked','class'=>'form-control'
 		));
 		$this->addElements(array($combo,$supplier_id,$inactive,$deactive,$company,$corent_brand,
-				$secont_language,$open_po,$contact_name,$background,$ytd_purchase,$edit,$available_credite,$website_phone,$resize,$note));
+				$secont_language,$open_po,$contact_name,$background,$ytd_purchase,$edit,$available_credite,
+				$website_phone,$resize,$phone2,$title,$address,$address2,$city,$country,$fax,$fax2,$email,
+				$webpage));
+		
 		return $this;
 		
 	}	
