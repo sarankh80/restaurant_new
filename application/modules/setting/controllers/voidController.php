@@ -1,5 +1,5 @@
 <?php
-class setting_voidController extends Zend_Controller_Action {
+class  setting_voidController extends Zend_Controller_Action {
 	const REDIRECT_URL = '/group/index';
 	public function init()
 	{
