@@ -76,8 +76,8 @@
 								<a onclick="OpenClassTable()" href="javascript:void(0)"><i class="fa fa-th-large"></i> <span class="title"> Tables Management</span><i class="icon-arrow"></i> </a>
 								<ul class="sub-menu">
 									<li id="menu_customer">
-										<a href="<?php echo $this->baseUrl()?>/table/customer">
-											<?php echo $tr->translate("APPLY_customer")?>
+										<a href="<?php echo $this->baseUrl()?>/table/index">
+											<?php echo $tr->translate("APPLY_CUSTOMER")?>
 										</a>
 									</li>
 									<li id="menu_tables">
@@ -85,19 +85,39 @@
 											<?php echo $tr->translate("TABLES")?>
 										</a>
 									</li>
-									<li id="menu_arrangement">
+									<li id="menu_arrange_ment">
 										<a href="<?php echo $this->baseUrl()?>/table/arrangement">
 											<?php echo $tr->translate("TABLE_ARRANGEMENT")?>
 										</a>
 									</li>
-									<li>
-										<a href="table_data.html">
-											<span class="title">Advanced Data Tables</span>
+									<li id="menu_tablegroup">
+										<a href="<?php echo $this->baseUrl()?>/table/tablegroup">
+											<?php echo $tr->translate("TABLE_GROUP")?>
 										</a>
 									</li>
-									<li>
-										<a href="table_export.html">
-											<span class="title">Table Export</span>
+									<li id="menu_tabletype">
+										<a href="<?php echo $this->baseUrl()?>/table/tabletype">
+											<?php echo $tr->translate("TABLE_TYPE")?>
+										</a>
+									</li>
+									<li id="menu_table_time_charge">
+										<a href="<?php echo $this->baseUrl()?>/table/timecharge">
+											<?php echo $tr->translate("TIME_CHARGE")?>
+										</a>
+									</li>
+									<li id="menu_table_unlock_service">
+										<a href="<?php echo $this->baseUrl()?>/table/unlockservice">
+											<?php echo $tr->translate("UNLOCK_SERVICE")?>
+										</a>
+									</li>
+									<li id="menu_table_unlock">
+										<a href="<?php echo $this->baseUrl()?>/table/unlocktable">
+											<?php echo $tr->translate("UNLOCK_TABLE")?>
+										</a>
+									</li>
+									<li id="menu_table_service">
+										<a href="<?php echo $this->baseUrl()?>/table/tableservice">
+											<?php echo $tr->translate("SERVICE")?>
 										</a>
 									</li>
 								</ul>
