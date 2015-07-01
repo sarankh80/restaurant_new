@@ -157,10 +157,10 @@
 									</li>
 									<li id="menu_credit">
 										<a href="<?php echo $this->baseUrl()?>/customer/credit">
-											<?php echo $tr->translate("CREDIT CARD")?>
+											<?php echo $tr->translate("CREDIT_CARD")?>
 										</a>
 									</li>
-									<li id="menu_customer">
+									<li id="menu_customers">
 										<a href="<?php echo $this->baseUrl()?>/customer/customer">
 											<?php echo $tr->translate("CUSTOMER")?>
 										</a>
@@ -172,32 +172,42 @@
 									</li>
 									<li id="menu_curtype">
 										<a href="<?php echo $this->baseUrl()?>/customer/curtype">
-											<?php echo $tr->translate("CURRENCY TYPE")?>
+											<?php echo $tr->translate("CURRENCY_TYPE")?>
 										</a>
 									</li>
 									<li id="menu_cash">
 										<a href="<?php echo $this->baseUrl()?>/customer/cash">
-											<?php echo $tr->translate("ENTER CASH DEPOSIT")?>
+											<?php echo $tr->translate("ENTER_CASH_DEPOSIT")?>
 										</a>
 									</li>
 									<li id="menu_invoice">
 										<a href="<?php echo $this->baseUrl()?>/customer/invoice">
-											<?php echo $tr->translate("ENTER INVOICE PAYMENT")?>
+											<?php echo $tr->translate("ENTER_INVOICE_PAYMENT")?>
 										</a>
 									<li>
 									<li id="menu_rate">
 										<a href="<?php echo $this->baseUrl()?>/customer/rate">
-											<?php echo $tr->translate("EXCHANGE RATE")?>
+											<?php echo $tr->translate("EXCHANGE_RATE")?>
 										</a>
 									</li>
 									<li id="menu_sale">
 										<a href="<?php echo $this->baseUrl()?>/customer/sale">
-											<?php echo $tr->translate("SALE REPRESENTATIVE")?>
+											<?php echo $tr->translate("SALE_REPRESENTATIVE")?>
+										</a>
+									</li>
+									<li id="menu_group">
+										<a href="<?php echo $this->baseUrl()?>/customer/group">
+											<?php echo $tr->translate("CUSTOMER_GROUP")?>
+										</a>
+									</li>
+									<li id="menu_edit">
+										<a href="<?php echo $this->baseUrl()?>/customer/edit">
+											<?php echo $tr->translate("EDIT_VOID_DEPOSIT")?>
 										</a>
 									</li>
 								</ul>
 							</li>
-							<li>
+							<li >
 								<a href="javascript:void(0)"><i class="fa fa-building-o"></i> <span class="title">Report Management</span><i class="icon-arrow"></i> </a>
 								<ul class="sub-menu">
 									<li>
@@ -229,56 +239,127 @@
 									</li>
 								</ul>
 							</li>
-							<li>
-								<a href="javascript:void(0)"><i class="fa fa-cog"></i> <span class="title">Systemt Management</span><i class="icon-arrow"></i> </a>
+							<li id="menu_setting">
+								<a href="javascript:void(0)"><i class="fa fa-users"></i> <span class="title">System Setting</span><i class="icon-arrow"></i> </a>
 								<ul class="sub-menu">
-									<li>
-										<a href="login_login.html">
-											<span class="title"> Login Form </span>
+									<li id="menu_backup">
+										<a href="<?php echo $this->baseUrl()?>/setting/backup">
+											<?php echo $tr->translate("BACKUP_DATA")?>
 										</a>
 									</li>
-									<li>
-										<a href="login_login.html?box=register">
-											<span class="title"> Registration Form </span>
+									<li id="menu_changekey">
+										<a href="<?php echo $this->baseUrl()?>/setting/changekey">
+											<?php echo $tr->translate("CHANGE_KEY")?>
 										</a>
 									</li>
-									<li>
-										<a href="login_login.html?box=forgot">
-											<span class="title"> Forgot Password Form </span>
+									<li id="menu_company">
+										<a href="<?php echo $this->baseUrl()?>/setting/company">
+											<?php echo $tr->translate("COMPANY_SETTINGS")?>
 										</a>
 									</li>
+									
+									<li id="menu_cost">
+										<a href="<?php echo $this->baseUrl()?>/setting/costchange">
+											<?php echo $tr->translate("COST_CHANGE")?>
+										</a>
 									<li>
-										<a href="login_lock_screen.html">
-											<span class="title">Lock Screen</span>
+									
+									<li id="menu_export">
+										<a href="<?php echo $this->baseUrl()?>/setting/export">
+											<?php echo $tr->translate("EXPORT_DATA")?>
 										</a>
 									</li>
+									
+									<li id="menu_office">
+										<a href="<?php echo $this->baseUrl()?>/setting/office">
+											<?php echo $tr->translate("HEAD_OFFICE_COMPANY_SETTING")?>
+										</a>
+									</li>
+									
+									<li id="menu_import">
+										<a href="<?php echo $this->baseUrl()?>/setting/import">
+											<?php echo $tr->translate("IMPORT_DATA")?>
+										</a>
+									<li>
+									
+									
+									<li id="menu_payment">
+										<a href="<?php echo $this->baseUrl()?>/setting/payment">
+											<?php echo $tr->translate("PAYMENT_TYPE")?>
+										</a>
+									</li>
+									
+									<li id="menu_restore">
+										<a href="<?php echo $this->baseUrl()?>/setting/restore">
+											<?php echo $tr->translate("RESOTE_DATA")?>
+										</a>
+									</li>
+									
+									
+									<li id="menu_select">
+										<a href="<?php echo $this->baseUrl()?>/setting/select">
+											<?php echo $tr->translate("SELECT_POS_COMPANY")?>
+										</a>
+									</li>
+									<li id="menu_station">
+										<a href="<?php echo $this->baseUrl()?>/setting/station">
+											<?php echo $tr->translate("STATION_SETTINGS")?>
+										</a>
+									</li>
+									<li id="menu_system">
+										<a href="<?php echo $this->baseUrl()?>/setting/systemuser">
+											<?php echo $tr->translate("SYSTEM_USER")?>
+										</a>
+									</li>
+									<li id="menu_unlock">
+										<a href="<?php echo $this->baseUrl()?>/setting/unlock">
+											<?php echo $tr->translate("UNLOCK_USER")?>
+										</a>
+									</li>
+									
+									<li id="menu_void">
+										<a href="<?php echo $this->baseUrl()?>/setting/void">
+											<?php echo $tr->translate("VOID_DAY_TRANSACTION")?>
+										</a>
+									</li>
+								
+								
+									
+									
 								</ul>
 							</li>
-							<li>
+							<li id="menu_user">
 								<a href="javascript:void(0)"><i class="fa fa-user"></i> <span class="title">User Management</span><i class="icon-arrow"></i> </a>
 								<ul class="sub-menu">
-									<li>
-										<a href="login_login.html">
-											<span class="title"> Login Form </span>
+									<li id="menu_user">
+										<a href="<?php echo $this->baseUrl()?>/user/user">
+											<?php echo $tr->translate("USER")?>
 										</a>
 									</li>
-									<li>
-										<a href="login_login.html?box=register">
-											<span class="title"> Registration Form </span>
+									<li id="menu_usertype">
+										<a href="<?php echo $this->baseUrl()?>/user/usertype">
+											<?php echo $tr->translate("USER_TYPE")?>
 										</a>
 									</li>
-									<li>
-										<a href="login_login.html?box=forgot">
-											<span class="title"> Forgot Password Form </span>
+									<li id="menu_changepwd">
+										<a href="<?php echo $this->baseUrl()?>/user/changepwd">
+											<?php echo $tr->translate("CHANGE_PASSWORD")?>
 										</a>
 									</li>
-									<li>
-										<a href="login_lock_screen.html">
-											<span class="title">Lock Screen</span>
+									
+									<li id="menu_access">
+										<a href="<?php echo $this->baseUrl()?>/user/access">
+											<?php echo $tr->translate("ACCESS_USER")?>
+										</a>
+									</li>
+									<li id="menu_module">
+										<a href="<?php echo $this->baseUrl()?>/user/moduleuser">
+											<?php echo $tr->translate("MODULE_USER")?>
 										</a>
 									</li>
 								</ul>
 							</li>
+							
 						</ul>
 						<!-- end: MAIN NAVIGATION MENU -->
 					</div>
