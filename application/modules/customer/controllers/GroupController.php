@@ -1,5 +1,5 @@
 <?php
-class Menu_GroupController extends Zend_Controller_Action {
+class customer_groupController extends Zend_Controller_Action {
 	const REDIRECT_URL = '/group/index';
 	public function init()
 	{
@@ -8,8 +8,8 @@ class Menu_GroupController extends Zend_Controller_Action {
 	}
 	public function indexAction(){
 		//$this->_helper->layout()->disableLayout();
-		$frm = new menu_Form_FrmMenuGroup();
-		$this->view->form = $frm->FrmMenu();
+		$frm = new customer_Form_FrmGroup();
+		$this->view->form = $frm->FrmGroup();
 	}
 	
 	

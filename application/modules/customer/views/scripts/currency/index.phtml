@@ -90,27 +90,27 @@ input[type=checkbox]{*opacity: 1!important;}
 													<?php echo $form->getElement('decimal');?>
 												</div>
 											</div>
-											<div class="form-group col-sm-12">
-												<label class="col-sm-2 control-label">
+											<div class="form-group col-sm-6">
+												<label class="col-sm-4 control-label">
 													<?php echo $tr->translate("EXCHANGE_RATE")?> <span class="symbol required"></span>
 												</label>
-												<div class="col-sm-10">
+												<div class="col-sm-8">
 													<?php echo $form->getElement('exchange');?>
 												</div>
 											</div>
 											
 											
 											<div class="form-group col-sm-6">
-													<label class="col-sm-4 control-label" for="form-field-1">
-														<?php echo $tr->translate("1_CURRENCY=xXx_BASE")?> <span class="symbol required"></span>
+													<label class="col-sm-5 control-label" for="form-field-1">
+														<?php echo $tr->translate("CURRENCY_BASE")?> <span class="symbol required"></span>
 													</label>
-													<div class="col-sm-2">
+													<div class="col-sm-1">
 														<label class="checkbox-inline">
 															<?php echo $form->getElement('currency');?>
 														</label>													
 													</div>
 													<label class="col-sm-4 control-label" for="form-field-1">
-														<?php echo $tr->translate("1_BASE=xXx_CURRENCY")?> <span class="symbol required"></span>
+														<?php echo $tr->translate("BASE_CURRENCY")?> <span class="symbol required"></span>
 													</label>
 													<div class="col-sm-2">
 														<label class="checkbox-inline">
