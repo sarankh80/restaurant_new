@@ -1,5 +1,5 @@
 <?php
-class  Customer_rateController extends Zend_Controller_Action {
+class customer_rateController extends Zend_Controller_Action {
 	const REDIRECT_URL = '/group/index';
 	public function init()
 	{
@@ -8,8 +8,8 @@ class  Customer_rateController extends Zend_Controller_Action {
 	}
 	public function indexAction(){
 		//$this->_helper->layout()->disableLayout();
-		$frm = new menu_Form_FrmMenuArrangement();
-		$this->view->form = $frm->FrmMenu();
+		$frm = new customer_Form_FrmCustomer();
+		$this->view->form = $frm->Frmcustomer();
 	}
 	
 	
