@@ -14,7 +14,7 @@ Class user_Form_FrmChangepwd extends Zend_Form {
 		$pwd ->setAttribs(array(
 				'class'=>'form-control',
 		));
-		$confirm = new Zend_Form_Element_Text('confirm ');
+		$confirm = new Zend_Form_Element_Text('confirm_pwd');
 		$confirm ->setAttribs(array(
 				'class'=>'form-control',
 		));

@@ -5,8 +5,8 @@
 <script type="text/javascript">
 <!--
 $(document).ready(function(){
-	var d = document.getElementById("menu_user");
-	var g = document.getElementById("menu_module");
+	var d = document.getElementById("menu_setting");
+	var g = document.getElementById("menu_import");
 	d.className = d.className + " active open";
 	g.className = g.className + " active open";
 });
@@ -128,7 +128,7 @@ input[type=checkbox]{*opacity: 1!important;}
 											    <label class="col-sm-4 control-label" for="form-field-1">
 													<?php echo $tr->translate("ACCESS_TO_COMPANY")?> <span class="symbol required"></span>
 												</label>
-												</label>
+												
 												<div class="col-sm-8">
 													<?php echo $form->getElement('access_to_company');?> 
 												</div>
@@ -139,7 +139,7 @@ input[type=checkbox]{*opacity: 1!important;}
 												<label class="col-sm-4 control-label" for="form-field-1">
 													<?php echo $tr->translate("DEFAULT_COMPANY")?> <span class="symbol required"></span>
 												</label>
-												</label>
+											
 												<div class="col-sm-8">
 													<?php echo $form->getElement('default_company');?>
 												</div>
@@ -148,7 +148,7 @@ input[type=checkbox]{*opacity: 1!important;}
 											    <label class="col-sm-4 control-label" for="form-field-1">
 													<?php echo $tr->translate("PASSWORD")?> <span class="symbol required"></span>
 												</label>
-												</label>
+											
 												<div class="col-sm-8">
 													<?php echo $form->getElement('password');?>
 												</div>
@@ -159,7 +159,7 @@ input[type=checkbox]{*opacity: 1!important;}
 												<label class="col-sm-4 control-label" for="form-field-1">
 													<?php echo $tr->translate("CONFIRM_PASSWORD")?> <span class="symbol required"></span>
 												</label>
-												</label>
+												
 												<div class="col-sm-8">
 													<?php echo $form->getElement('confirm_password');?>
 												</div>
@@ -168,7 +168,7 @@ input[type=checkbox]{*opacity: 1!important;}
 											    <label class="col-sm-4 control-label" for="form-field-1">
 													<?php echo $tr->translate("NOTE")?> <span class="symbol required"></span>
 												</label>
-												</label>
+												
 												<div class="col-sm-8">
 													<?php echo $form->getElement('note');?>
 												</div>
