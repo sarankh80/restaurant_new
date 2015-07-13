@@ -48,58 +48,33 @@ input[type=checkbox]{*opacity: 1!important;}
 								<div class="panel panel-white">
 									<div class="panel-heading">
 										<div class="" style="float: right;">
-											<button type="submit" class="btn btn-primary"><i class="fa fa-edit"></i> Edit</button>
+											<button type="submit" class="btn btn-primary"><i class="fa fa-edit"></i> Eidt</button>
 											<button type="button" class="btn btn-primary panel-refresh"><i class="fa fa-save"></i> Save</button>
 											<button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-log-in"></i> Save New</button>
-											<a href="<?php echo $this->baseUrl();?>/menu"><button type="button" class="btn btn-red"><i class="fa fa-times"></i> Exit</button></a>
+											<a href="<?php echo $this->baseUrl();?>/menu"><button type="button" class="btn btn-red"><i class="fa fa-times"></i> Eixt</button></a>
 										</div>
 									</div>
 									<div class="panel-body">
 										<div class="col-sm-12" style="padding: 0;">
 											<div class="form-group col-sm-6">
 												<label class="col-sm-4 control-label">
-													<?php echo $tr->translate("MENU_GROUP_CODE")?> <span class="symbol required"></span>
+													<?php echo $tr->translate("CUSTOMER_ID")?> <span class="symbol required"></span>
 												</label>
 												<div class="col-sm-8">
-													<?php echo $form->getElement('menu_code');?>
+													<?php echo $form->getElement('customer_id');?>
 												</div>
 											</div>
 											<div class="form-group col-sm-6">
 												<label class="col-sm-4 control-label">
-													<?php echo $tr->translate("DESCRIPTION")?> <span class="symbol required"></span>
+													<?php echo $tr->translate("GENERAL")?> <span class="symbol required"></span>
 												</label>
 												<div class="col-sm-8">
-													<?php echo $form->getElement('description');?>
+													<?php echo $form->getElement('general');?>
 												</div>
 											</div>
-										</div>
+								
 										<div class="col-sm-12" style="padding: 0;">
-											<div class="form-group col-sm-6">
-												<label class="col-sm-4 control-label">
-													<?php echo $tr->translate("LANG_ONE")?> <span class="symbol required"></span>
-												</label>
-												<div class="col-sm-8">
-													<?php echo $form->getElement('lang_1');?>
-												</div>
-											</div>
-											<div class="form-group col-sm-6">
-												<label class="col-sm-4 control-label">
-													<?php echo $tr->translate("LANG_TWO")?>
-												</label>
-												<div class="col-sm-8">
-													<?php echo $form->getElement('lang_2');?>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-12" style="padding: 0;">
-											<div class="form-group col-sm-6">
-												<label class="col-sm-4 control-label" for="form-field-1">
-													<?php echo $tr->translate("SHOW_DESCRIPTION")?> <span class="symbol required"></span>
-												</label>
-												<div class="col-sm-8">
-													<?php echo $form->getElement('show_description');?>
-												</div>
-											</div>
+											
 											<div class="form-group col-sm-6">
 												<label class="col-sm-4 control-label" for="form-field-1">
 													<?php echo $tr->translate("IMAGE")?>  <span class="symbol required"></span>
@@ -121,136 +96,7 @@ input[type=checkbox]{*opacity: 1!important;}
 												</div>
 											</div>
 										</div>
-										<div class="col-sm-12" style="padding: 0;">
-											<div class="form-group col-sm-6">
-												<div class="col-sm-12">
-													<div class="tabbable" style="margin-top: -100px;" id="tabShwo">
-														<ul id="myTab" class="nav nav-tabs">
-															<li class="active">
-																<a href="#myTab_example1" data-toggle="tab">
-																	<i class="green fa fa-gear"></i> <?php echo $tr->translate("GENERAL_INFORMATION")?>
-																</a>
-															</li>
-															<li>
-																<a href="#myTab_example2" data-toggle="tab">
-																	<i class="green fa fa-gear"></i> <?php echo $tr->translate("LOCATION_OF_MENU_GROUP")?>
-																</a>
-															</li>
-															<li>
-																<a href="#myTab_example3" data-toggle="tab">
-																	<i class="green fa fa-gear"></i> <?php echo $tr->translate("NOTE")?>
-																</a>
-															</li>
-														</ul>
-														<div class="tab-content">
-															<div class="tab-pane fade in active" id="myTab_example1">
-																<div class="form-group">
-																	<label class="col-sm-4 control-label" for="form-field-1">
-																		<?php echo $tr->translate("BACKGROUP_COLOR")?>
-																	</label>
-																	<div class="col-sm-8">
-																		<?php echo $form->getElement('background');?>
-																	</div>
-																</div>
-																<div class="form-group">
-																	<label class="col-sm-4 control-label" for="form-field-1">
-																		<?php echo $tr->translate("FONT_COLOR")?>
-																	</label>
-																	<div class="col-sm-8">
-																		<div class="input-group">
-																			<?php echo $form->getElement('font_color');?>
-																			<span class="btn input-group-addon btn-azure" data-toggle="dropdown">color</span>
-																			<ul class="dropdown-menu pull-right center">
-																				<li>
-																					<div class="color-palette"></div>
-																				</li>
-																			</ul>
-																		</div>
-																	</div>
-																</div>
-																<div class="form-group">
-																	<label class="col-sm-4 control-label" for="form-field-1">
-																		<?php echo $tr->translate("FONT_SIZE")?>
-																	</label>
-																	<div class="col-sm-8">
-																		<?php echo $form->getElement('demo3');?>
-																	</div>
-																</div>
-															</div>
-															<div class="tab-pane fade" id="myTab_example2">
-																<div class="form-group">
-																	<label class="col-sm-4 control-label" for="form-field-1">
-																		<?php echo $tr->translate("FORMART")?> <span class="symbol required"></span>
-																	</label>
-																	<div class="col-sm-8">
-																		<?php echo $form->getElement('demo4');?>
-																	</div>
-																</div>
-																<div class="form-group">
-																	<label class="col-sm-4 control-label" for="form-field-1">
-																		<?php echo $tr->translate("SETTING")?> <span class="symbol required"></span>
-																	</label>
-																	<div class="col-sm-8">
-																		<?php echo $form->getElement('setting');?>                                                
-																	</div>
-																</div>
-																<div class="form-group">
-																	<label class="col-sm-4 control-label" for="form-field-1">
-																		<?php echo $tr->translate("ARRANGE")?> <span class="symbol required"></span>
-																	</label>
-																	<div class="col-sm-8">
-																		<?php echo $form->getElement('arrange');?>                                                
-																	</div>
-																</div>
-																<div class="form-group">
-																	<label class="col-sm-4 control-label" for="form-field-1">
-																		<?php echo $tr->translate("RESIZE")?> <span class="symbol required"></span>
-																	</label>
-																	<div class="col-sm-8">
-																		<?php echo $form->getElement('resize');?>                                                
-																	</div>
-																</div>
-															</div>
-															<div class="tab-pane fade" id="myTab_example3">
-																<div class="form-group">																	<br />
-																	<div class="col-sm-12">
-																		<?php echo $form->getElement('note');?>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="form-group col-sm-6">
-												<div class="col-sm-12">
-													<label class="col-sm-4 control-label" for="form-field-1" style="margin-top: 9px;" >
-														<?php echo $tr->translate("COMBO")?> <span class="symbol required"></span>
-													</label>
-													<div class="col-sm-2">
-														<label class="checkbox-inline">
-															<?php echo $form->getElement('combo');?>
-														</label>													
-													</div>
-													<label class="col-sm-4 control-label" for="form-field-1" style="margin-top: 9px;">
-														<?php echo $tr->translate("ACTIVE")?> <span class="symbol required"></span>
-													</label>
-													<div class="col-sm-2">
-														<label class="checkbox-inline">
-															<?php echo $form->getElement('active');?>
-														</label>													
-													</div>
-													<div  class="col-sm-12">
-														<label class="col-sm-4 control-label" for="form-field-2">
-															<?php echo $tr->translate("APPLY_TO_COMPANY")?> <span class="symbol required"></span>
-														</label>
-														<div class="col-sm-8">
-															<?php echo $form->getElement('apply')?>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
+										
 										<div class="col-md-12">
 												<div class="panel-body table-responsive" id="panel-body">
 													<table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">

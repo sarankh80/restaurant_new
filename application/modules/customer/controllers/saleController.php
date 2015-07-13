@@ -8,8 +8,8 @@ class  Customer_saleController extends Zend_Controller_Action {
 	}
 	public function indexAction(){
 		//$this->_helper->layout()->disableLayout();
-		$frm = new menu_Form_FrmMenuArrangement();
-		$this->view->form = $frm->FrmMenu();
+		$frm = new customer_Form_FrmDeposit();
+		$this->view->form = $frm->FrmDeposit();
 	}
 	
 	

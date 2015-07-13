@@ -8,8 +8,8 @@ class customer_rateController extends Zend_Controller_Action {
 	}
 	public function indexAction(){
 		//$this->_helper->layout()->disableLayout();
-		$frm = new customer_Form_FrmCustomer();
-		$this->view->form = $frm->Frmcustomer();
+		$frm = new customer_Form_FrmGroup();
+		$this->view->form = $frm->FrmGroup();
 	}
 	
 	
