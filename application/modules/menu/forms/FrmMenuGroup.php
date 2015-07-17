@@ -6,17 +6,18 @@ Class menu_Form_FrmMenuGroup extends Zend_Form {
 		$this->tr = Application_Form_FrmLanguages::getCurrentlanguage();
 	}
 	public function FrmMenu($data=null){
+		$db = new menu_Model_DbTable_DbMenuGroup();
 		$menu_code = new Zend_Form_Element_Text('menu_code');
 		$menu_code->setAttribs(array(
-				'class'=>'form-control',
+				'class'=>'form-control',  'validate'=>true,
 		));
 		$description = new Zend_Form_Element_Text('description');
 		$description->setAttribs(array(
-				'class'=>'form-control',
+				'class'=>'form-control',  'validate'=>true,
 		));
 		$lang_1 = new Zend_Form_Element_Text('lang_1');
 		$lang_1->setAttribs(array(
-				'class'=>'form-control',
+				'class'=>'form-control', 'validate'=>true,
 		));
 		$lang_2 = new Zend_Form_Element_Text('lang_2');
 		$lang_2->setAttribs(array(
@@ -33,8 +34,14 @@ Class menu_Form_FrmMenuGroup extends Zend_Form {
 		$show_description->setAttribs(array(
 				'class'=>'form-control'
 		));
-		$description_opt = array( ""=>$this->tr->translate("SELECT_DESCRIPTION"));
+		$description_opt = array( 
+				0 =>$this->tr->translate("SELECT_DESCRIPTION"),
+				1 =>$this->tr->translate("CODE"),
+				2 =>$this->tr->translate("DESCRIPTION"),
+				3 =>$this->tr->translate("LANG_ONE"),
+				4 =>$this->tr->translate("LANG_TWO"));
 		$show_description->setMultiOptions($description_opt);
+		
 		$photo = new Zend_Form_Element_File('photo');
 		$background = new Zend_Form_Element_Text('background');
 		$background->setAttribs(array(
@@ -60,7 +67,7 @@ Class menu_Form_FrmMenuGroup extends Zend_Form {
 		));
 		$active = new Zend_Form_Element_Checkbox('active');
 		$active->setAttribs(array(
-				'class'=>'yellow',
+				'class'=>'red',
 		));
 		$format = new Zend_Form_Element_Text('demo4');
 		$format->setAttribs(array(
@@ -87,6 +94,13 @@ Class menu_Form_FrmMenuGroup extends Zend_Form {
 		));
 		$this->addElements(array($apply,$active,$combo,$menu_code,$description,$lang_1,$lang_2,$lang_3,
 				$show_description,$background,$font_color,$font_size,$format,$setting,$arrange,$resize,$note));
+		if($data !=""){
+			$menu_code->setValue($data['menu_group_code']);
+			$description->setValue($data['menu_group']);
+			$lang_1->setValue($data['menu_group2']);
+			$lang_2->setValue($data['menu_group3']);
+			$show_description->setValue($data['show_group']);
+		}
 		return $this;
 		
 	}	

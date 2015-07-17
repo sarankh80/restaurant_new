@@ -1,5 +1,7 @@
 <?php 
 	$tr=Application_Form_FrmLanguages::getCurrentlanguage(); $form = $this->form;
+	$url = $this->url(array('module'=>'menu','controller'=>'group','action'=>'index'));
+	$url_edit = $this->url(array('module'=>'menu','controller'=>'group','action'=>'index'),null,true);
 ?>
 <script src="<?php echo $this->baseUrl();?>/active.js"></script>
 <script type="text/javascript">
@@ -11,7 +13,14 @@ $(document).ready(function(){
 	g.className = g.className + " active open";
 });
 //-->
-</script>
+var menu_code = $('#menu_code').val();
+var description = $('#description').val();
+var lang_1 = $('#lang_1').val();
+var lang_2 = $('#lang_2').val();
+var show_description = $('#show_description').val();
+var photo = $('#photo').val();
+
+</script>	
 <style>
 <!--
 #panel-body{padding: 0 !important;}
@@ -22,7 +31,7 @@ input[type=checkbox]{*opacity: 1!important;}
 -->
 </style>
 <div class="main-wrapper">
-	<form role="form"  class="form-horizontal" id="form" enctype="multipart/form-data" method="post">
+	<form role="form"  class="form-horizontal" id="" enctype="multipart/form-data" method="post">
 			<!-- start: MAIN CONTAINER -->
 			<div class="main-container inner">
 				<!-- start: PAGE -->
@@ -49,8 +58,8 @@ input[type=checkbox]{*opacity: 1!important;}
 									<div class="panel-heading">
 										<div class="" style="float: right;">
 											<button type="submit" class="btn btn-primary"><i class="fa fa-edit"></i> Eidt</button>
-											<button type="button" class="btn btn-primary panel-refresh"><i class="fa fa-save"></i> Save</button>
-											<button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-log-in"></i> Save New</button>
+											<button type="submit" name="btnsave" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
+											<button type="submit" class="btn btn-primary" ><i class="glyphicon glyphicon-log-in"></i> Save New</button>
 											<a href="<?php echo $this->baseUrl();?>/menu"><button type="button" class="btn btn-red"><i class="fa fa-times"></i> Eixt</button></a>
 										</div>
 									</div>
@@ -111,7 +120,7 @@ input[type=checkbox]{*opacity: 1!important;}
 														<div class="fileupload-preview fileupload-exists thumbnail"></div>
 														<div>
 															<span class="btn btn-light-grey btn-file"><span class="fileupload-new"><i class="fa fa-picture-o"></i> Select image</span><span class="fileupload-exists"><i class="fa fa-picture-o"></i> Change</span>
-																<input type="file" name="photo">
+																<input type="file" name="photo" id="photo">
 															</span>
 															<a href="#" class="btn fileupload-exists btn-light-grey" data-dismiss="fileupload">
 																<i class="fa fa-times"></i> Remove
@@ -264,21 +273,15 @@ input[type=checkbox]{*opacity: 1!important;}
 															</tr>
 														</thead>
 														<tbody>
+														<?php $i = 1; foreach ($this->showtable as $row){?>															
 															<tr>
-																<td style="text-align: center;">1</td>
-																<td>Amaya</td>
-																<td class="hidden-xs">W3C,
-																INRIA</td>
-																<td>Free</td>
-																<td class="hidden-xs">W3C</td>
-															</tr>
-															<tr>
-																<td style="text-align: center;">2</td>
-																<td>AOL Explorer</td>
-																<td class="hidden-xs">America Online, Inc</td>
-																<td>Free</td>
-																<td class="hidden-xs">Proprietary</td>
-															</tr>
+																<td style="text-align: center;"><?php echo $i++?></td>
+																<td><a href="<?php echo $url_edit;?>/index/id/<?php echo $row['menu_group_id']?>"><?php echo $row['menu_group_code']?></a></td>
+																<td><a href="<?php echo $url_edit;?>/index/id/<?php echo $row['menu_group_id']?>"><?php echo $row['menu_group']?></a></td>
+																<td><a href="<?php echo $url_edit;?>/index/id/<?php echo $row['menu_group_id']?>"><?php echo $row['menu_group2']?></a></td>
+																<td><a href="<?php echo $url_edit;?>/index/id/<?php echo $row['menu_group_id']?>"><?php echo $row['menu_group3']?></a></td>																
+															</tr>																														
+															<?php }?>
 														</tbody>
 													</table>
 												</div>
@@ -305,9 +308,3 @@ input[type=checkbox]{*opacity: 1!important;}
 		</div>
 	</form>
 </div>
-<script>
-	function SaveData(){
-		div = document.getElementById("refreshdiv");
-		div.submit();
-	}
-</script>

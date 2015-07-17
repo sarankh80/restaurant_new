@@ -10,6 +10,10 @@ Class menu_Form_FrmMenuCombo extends Zend_Form {
 		$menu_code->setAttribs(array(
 				'class'=>'form-control',
 		));
+		$combo_code = new Zend_Form_Element_Text('combo_code');
+		$combo_code->setAttribs(array(
+				'class'=>'form-control',
+		));
 		$description = new Zend_Form_Element_Text('description');
 		$description->setAttribs(array(
 				'class'=>'form-control',
@@ -85,7 +89,7 @@ Class menu_Form_FrmMenuCombo extends Zend_Form {
 		$note->setAttribs(array(
 				'class'=>'form-control','style'=>"margin-top: 0px; margin-bottom: 0px; height: 100px;"
 		));
-		$this->addElements(array($apply,$active,$combo,$menu_code,$description,$lang_1,$lang_2,$lang_3,
+		$this->addElements(array($apply,$active,$combo,$menu_code,$description,$lang_1,$lang_2,$lang_3,$combo_code,
 				$show_description,$background,$font_color,$font_size,$format,$setting,$arrange,$resize,$note));
 		return $this;
 		
