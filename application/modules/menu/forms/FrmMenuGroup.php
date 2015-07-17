@@ -6,7 +6,7 @@ Class menu_Form_FrmMenuGroup extends Zend_Form {
 		$this->tr = Application_Form_FrmLanguages::getCurrentlanguage();
 	}
 	public function FrmMenu($data=null){
-		$db = new menu_Model_DbTable_DbMenuGroup();
+		//$db = new menu_Model_DbTable_DbMenuGroup();
 		$menu_code = new Zend_Form_Element_Text('menu_code');
 		$menu_code->setAttribs(array(
 				'class'=>'form-control',  'validate'=>true,
