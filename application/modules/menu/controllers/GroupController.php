@@ -10,7 +10,7 @@ class Menu_GroupController extends Zend_Controller_Action {
 		//$this->_helper->layout()->disableLayout();
 		$frm = new menu_Form_FrmMenuGroup();
 		$this->view->form = $frm->FrmMenu();
-		$db = new menu_Model_DbTable_DbMenuGroup();
+	/*	$db = new menu_Model_DbTable_DbMenuGroup();
 		$this->view->showtable=$db->getMenuGrop();
 		$id = $this->getRequest()->getParam('id');
 		if($id==""){
@@ -25,7 +25,7 @@ class Menu_GroupController extends Zend_Controller_Action {
 			print_r($id);
 			$show = $db->getMenuGropByid($id);
 			$this->view->form = $frm->FrmMenu($show);
-		}		
+		}	*/	
 	}
 	
 	
